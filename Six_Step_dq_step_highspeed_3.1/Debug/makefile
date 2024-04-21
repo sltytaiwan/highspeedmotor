@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := D:/Program Files/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS
+CG_TOOL_ROOT := C:/ti/ccs1270/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -126,10 +126,10 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-highspeed_motor_3.1.out \
+highspeed_motor_3.1.out 
 
 EXE_OUTPUTS__QUOTED += \
-"highspeed_motor_3.1.out" \
+"highspeed_motor_3.1.out" 
 
 
 # All Target
@@ -140,7 +140,7 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 highspeed_motor_3.1.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"D:/Program Files/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla0 -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"highspeed_motor_3.1.map" --heap_size=0 --stack_size=0 --warn_sections -i"D:/Program Files/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/lib" -i"D:/Program Files/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="highspeed_motor_3.1_linkInfo.xml" -o "highspeed_motor_3.1.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1270/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla0 -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"highspeed_motor_3.1.map" --heap_size=0 --stack_size=0 --warn_sections -i"C:/ti/ccs1270/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/lib" -i"C:/ti/ccs1270/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="highspeed_motor_3.1_linkInfo.xml" -o "highspeed_motor_3.1.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 

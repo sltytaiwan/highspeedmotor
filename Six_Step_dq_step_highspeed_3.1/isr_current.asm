@@ -52,7 +52,7 @@ PVECTORS_49:
 
 		MOVW	DP,#GPIOpage2
 		TSET    @GPASET+1,#9				;測試中斷時間GPIO08
-;		TSET	@GPATOGGLE+1,#9
+		TSET	@GPATOGGLE+1,#9
 		RPT		#10
 		||	NOP
 
