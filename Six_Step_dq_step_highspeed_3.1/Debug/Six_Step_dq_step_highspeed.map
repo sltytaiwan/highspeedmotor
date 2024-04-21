@@ -1,0 +1,408 @@
+******************************************************************************
+             TMS320C2000 Linker PC v22.6.0                     
+******************************************************************************
+>> Linked Tue Nov 14 16:01:12 2023
+
+OUTPUT FILE NAME:   <Six_Step_dq_step_highspeed.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 0000869d
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+PAGE 0:
+  RAML012               00008000   00001000  000007ea  00000816  RWIX
+  OTP                   003d7800   00000400  00000000  00000400  RWIX
+  FLASHH                003e8000   00002000  00000000  00002000  RWIX
+  FLASHG                003ea000   00002000  00000000  00002000  RWIX
+  FLASHF                003ec000   00002000  00000000  00002000  RWIX
+  FLASHE                003ee000   00002000  00000000  00002000  RWIX
+  FLASHD                003f0000   00002000  00000000  00002000  RWIX
+  FLASHB                003f4000   00002000  00000000  00002000  RWIX
+  FLASHA                003f6000   00001f80  00000801  0000177f  RWIX
+  CSM_RSVD              003f7f80   00000076  00000000  00000076  RWIX
+  BEGIN_FLASH           003f7ff6   00000002  00000002  00000000  RWIX
+  CSM_PWL_P0            003f7ff8   00000008  00000000  00000008  RWIX
+  ROM                   003ff27c   00000d44  00000000  00000d44  RWIX
+  RESET                 003fffc0   00000002  00000000  00000002  RWIX
+  VECTORS               003fffc2   0000003e  00000000  0000003e  RWIX
+
+PAGE 1:
+  BOOT_RSVD             00000000   00000040  00000000  00000040  RWIX
+  RAMM0                 00000040   000003c0  00000000  000003c0  RWIX
+  RAML3                 00009000   000007ff  00000000  000007ff  RWIX
+  RAMM1                 0000a000   00000001  00000000  00000001  RWIX
+  FLASHC_1              003f2000   000007ff  000000fe  00000701  RWIX
+  FLASHC_2              003f3000   00001000  00001000  00000000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+copysections 
+*          0    003f67ea    0000000f     
+                  003f67ea    0000000f     SectionCopy_nonBIOS.obj (copysections)
+
+wddisable 
+*          0    003f67f9    00000008     
+                  003f67f9    00000008     CodeStartBranch.obj (wddisable)
+
+codestart 
+*          0    003f7ff6    00000002     
+                  003f7ff6    00000002     CodeStartBranch.obj (codestart)
+
+PieVectTable 
+*          1    003f2000    000000fe     
+                  003f2000    000000fe     source_vectors.obj (PieVectTable)
+
+Sintable   1    003f3000    00001000     
+                  003f3000    00001000     source_main.obj (Sintable)
+
+.reset     0    003fffc0    00000000     DSECT
+
+vectors    0    003fffc2    00000000     DSECT
+
+.text      0    003f6000    000007ea     RUN ADDR = 00008000
+                  003f6000    0000052e     isr_current.obj (.text)
+                  003f652e    0000016f     source_initial.obj (.text)
+                  003f669d    000000a9     source_main.obj (.text)
+                  003f6746    000000a4     speed.obj (.text)
+
+MODULE SUMMARY
+
+       Module                    code   initialized data   uninitialized data
+       ------                    ----   ----------------   ------------------
+    .\
+       source_main.obj           338    4096               0                 
+       isr_current.obj           2652   0                  0                 
+       source_initial.obj        734    0                  0                 
+       speed.obj                 328    0                  0                 
+       source_vectors.obj        0      254                0                 
+       SectionCopy_nonBIOS.obj   15     0                  0                 
+       CodeStartBranch.obj       10     0                  0                 
+    +--+-------------------------+------+------------------+--------------------+
+       Total:                    4077   4350               0                 
+                                                                             
+    +--+-------------------------+------+------------------+--------------------+
+       Grand Total:              4077   4350               0                 
+
+
+GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
+
+
+[0 symbols]
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+page  address   name                 
+----  -------   ----                 
+0     00008000  .text                
+0     0000852e  INITIAL_ALL          
+0     000086c9  PVECTORS_01          
+0     000086ca  PVECTORS_02          
+0     000086cb  PVECTORS_03          
+0     000086cc  PVECTORS_04          
+0     000086cd  PVECTORS_05          
+0     000086ce  PVECTORS_06          
+0     000086cf  PVECTORS_07          
+0     000086d0  PVECTORS_08          
+0     000086d1  PVECTORS_09          
+0     000086d2  PVECTORS_10          
+0     0000872a  PVECTORS_100         
+0     0000872b  PVECTORS_101         
+0     0000872c  PVECTORS_102         
+0     0000872d  PVECTORS_103         
+0     0000872e  PVECTORS_104         
+0     0000872f  PVECTORS_105         
+0     00008730  PVECTORS_106         
+0     00008731  PVECTORS_107         
+0     00008732  PVECTORS_108         
+0     00008733  PVECTORS_109         
+0     000086d3  PVECTORS_11          
+0     00008734  PVECTORS_110         
+0     00008735  PVECTORS_111         
+0     00008736  PVECTORS_112         
+0     00008737  PVECTORS_113         
+0     00008738  PVECTORS_114         
+0     00008739  PVECTORS_115         
+0     0000873a  PVECTORS_116         
+0     0000873b  PVECTORS_117         
+0     0000873c  PVECTORS_118         
+0     0000873d  PVECTORS_119         
+0     000086d4  PVECTORS_12          
+0     0000873e  PVECTORS_120         
+0     0000873f  PVECTORS_121         
+0     00008740  PVECTORS_122         
+0     00008741  PVECTORS_123         
+0     00008742  PVECTORS_124         
+0     00008743  PVECTORS_125         
+0     00008744  PVECTORS_126         
+0     00008745  PVECTORS_127         
+0     000086d5  PVECTORS_13          
+0     000086d6  PVECTORS_14          
+0     000086d7  PVECTORS_15          
+0     000086d8  PVECTORS_16          
+0     000086d9  PVECTORS_17          
+0     000086da  PVECTORS_18          
+0     000086db  PVECTORS_19          
+0     000086dc  PVECTORS_20          
+0     000086dd  PVECTORS_21          
+0     000086de  PVECTORS_22          
+0     000086df  PVECTORS_23          
+0     000086e0  PVECTORS_24          
+0     000086e1  PVECTORS_25          
+0     000086e2  PVECTORS_26          
+0     000086e3  PVECTORS_27          
+0     000086e4  PVECTORS_28          
+0     000086e5  PVECTORS_29          
+0     000086e6  PVECTORS_30          
+0     000086e7  PVECTORS_31          
+0     000086e8  PVECTORS_32          
+0     000086e9  PVECTORS_33          
+0     000086ea  PVECTORS_34          
+0     000086eb  PVECTORS_35          
+0     000086ec  PVECTORS_36          
+0     000086ed  PVECTORS_37          
+0     000086ee  PVECTORS_38          
+0     000086ef  PVECTORS_39          
+0     000086f0  PVECTORS_40          
+0     000086f1  PVECTORS_41          
+0     000086f2  PVECTORS_42          
+0     000086f3  PVECTORS_43          
+0     000086f4  PVECTORS_44          
+0     000086f5  PVECTORS_45          
+0     000086f6  PVECTORS_46          
+0     000086f7  PVECTORS_47          
+0     000086f8  PVECTORS_48          
+0     00008000  PVECTORS_49          
+0     000086f9  PVECTORS_50          
+0     000086fa  PVECTORS_51          
+0     000086fb  PVECTORS_52          
+0     00008746  PVECTORS_53          
+0     000086fc  PVECTORS_54          
+0     000086fd  PVECTORS_55          
+0     000086fe  PVECTORS_56          
+0     000086ff  PVECTORS_57          
+0     00008700  PVECTORS_58          
+0     00008701  PVECTORS_59          
+0     00008702  PVECTORS_60          
+0     00008703  PVECTORS_61          
+0     00008704  PVECTORS_62          
+0     00008705  PVECTORS_63          
+0     00008706  PVECTORS_64          
+0     00008707  PVECTORS_65          
+0     00008708  PVECTORS_66          
+0     00008709  PVECTORS_67          
+0     0000870a  PVECTORS_68          
+0     0000870b  PVECTORS_69          
+0     0000870c  PVECTORS_70          
+0     0000870d  PVECTORS_71          
+0     0000870e  PVECTORS_72          
+0     0000870f  PVECTORS_73          
+0     00008710  PVECTORS_74          
+0     00008711  PVECTORS_75          
+0     00008712  PVECTORS_76          
+0     00008713  PVECTORS_77          
+0     00008714  PVECTORS_78          
+0     00008715  PVECTORS_79          
+0     00008716  PVECTORS_80          
+0     00008717  PVECTORS_81          
+0     00008718  PVECTORS_82          
+0     00008719  PVECTORS_83          
+0     0000871a  PVECTORS_84          
+0     0000871b  PVECTORS_85          
+0     0000871c  PVECTORS_86          
+0     0000871d  PVECTORS_87          
+0     0000871e  PVECTORS_88          
+0     0000871f  PVECTORS_89          
+0     00008720  PVECTORS_90          
+0     00008721  PVECTORS_91          
+0     00008722  PVECTORS_92          
+0     00008723  PVECTORS_93          
+0     00008724  PVECTORS_94          
+0     00008725  PVECTORS_95          
+0     00008726  PVECTORS_96          
+0     00008727  PVECTORS_97          
+0     00008728  PVECTORS_98          
+0     00008729  PVECTORS_99          
+abs   ffffffff  ___TI_pprof_out_hndl 
+abs   ffffffff  ___TI_prof_data_size 
+abs   ffffffff  ___TI_prof_data_start
+abs   ffffffff  ___binit__           
+abs   ffffffff  ___c_args__          
+abs   ffffffff  ___cinit__           
+0     000087ea  ___etext__           
+abs   ffffffff  ___pinit__           
+0     00008000  ___text__            
+0     0000869d  _c_int00             
+0     0000869d  _main                
+0     003f6000  _text_loadstart      
+0     00008000  _text_runstart       
+abs   000007ea  _text_size           
+abs   ffffffff  binit                
+abs   ffffffff  cinit                
+0     003f7ff6  code_start           
+0     003f67ea  copy_sections        
+0     000087ea  etext                
+abs   ffffffff  pinit                
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+page  address   name                 
+----  -------   ----                 
+0     00008000  .text                
+0     00008000  PVECTORS_49          
+0     00008000  ___text__            
+0     00008000  _text_runstart       
+0     0000852e  INITIAL_ALL          
+0     0000869d  _c_int00             
+0     0000869d  _main                
+0     000086c9  PVECTORS_01          
+0     000086ca  PVECTORS_02          
+0     000086cb  PVECTORS_03          
+0     000086cc  PVECTORS_04          
+0     000086cd  PVECTORS_05          
+0     000086ce  PVECTORS_06          
+0     000086cf  PVECTORS_07          
+0     000086d0  PVECTORS_08          
+0     000086d1  PVECTORS_09          
+0     000086d2  PVECTORS_10          
+0     000086d3  PVECTORS_11          
+0     000086d4  PVECTORS_12          
+0     000086d5  PVECTORS_13          
+0     000086d6  PVECTORS_14          
+0     000086d7  PVECTORS_15          
+0     000086d8  PVECTORS_16          
+0     000086d9  PVECTORS_17          
+0     000086da  PVECTORS_18          
+0     000086db  PVECTORS_19          
+0     000086dc  PVECTORS_20          
+0     000086dd  PVECTORS_21          
+0     000086de  PVECTORS_22          
+0     000086df  PVECTORS_23          
+0     000086e0  PVECTORS_24          
+0     000086e1  PVECTORS_25          
+0     000086e2  PVECTORS_26          
+0     000086e3  PVECTORS_27          
+0     000086e4  PVECTORS_28          
+0     000086e5  PVECTORS_29          
+0     000086e6  PVECTORS_30          
+0     000086e7  PVECTORS_31          
+0     000086e8  PVECTORS_32          
+0     000086e9  PVECTORS_33          
+0     000086ea  PVECTORS_34          
+0     000086eb  PVECTORS_35          
+0     000086ec  PVECTORS_36          
+0     000086ed  PVECTORS_37          
+0     000086ee  PVECTORS_38          
+0     000086ef  PVECTORS_39          
+0     000086f0  PVECTORS_40          
+0     000086f1  PVECTORS_41          
+0     000086f2  PVECTORS_42          
+0     000086f3  PVECTORS_43          
+0     000086f4  PVECTORS_44          
+0     000086f5  PVECTORS_45          
+0     000086f6  PVECTORS_46          
+0     000086f7  PVECTORS_47          
+0     000086f8  PVECTORS_48          
+0     000086f9  PVECTORS_50          
+0     000086fa  PVECTORS_51          
+0     000086fb  PVECTORS_52          
+0     000086fc  PVECTORS_54          
+0     000086fd  PVECTORS_55          
+0     000086fe  PVECTORS_56          
+0     000086ff  PVECTORS_57          
+0     00008700  PVECTORS_58          
+0     00008701  PVECTORS_59          
+0     00008702  PVECTORS_60          
+0     00008703  PVECTORS_61          
+0     00008704  PVECTORS_62          
+0     00008705  PVECTORS_63          
+0     00008706  PVECTORS_64          
+0     00008707  PVECTORS_65          
+0     00008708  PVECTORS_66          
+0     00008709  PVECTORS_67          
+0     0000870a  PVECTORS_68          
+0     0000870b  PVECTORS_69          
+0     0000870c  PVECTORS_70          
+0     0000870d  PVECTORS_71          
+0     0000870e  PVECTORS_72          
+0     0000870f  PVECTORS_73          
+0     00008710  PVECTORS_74          
+0     00008711  PVECTORS_75          
+0     00008712  PVECTORS_76          
+0     00008713  PVECTORS_77          
+0     00008714  PVECTORS_78          
+0     00008715  PVECTORS_79          
+0     00008716  PVECTORS_80          
+0     00008717  PVECTORS_81          
+0     00008718  PVECTORS_82          
+0     00008719  PVECTORS_83          
+0     0000871a  PVECTORS_84          
+0     0000871b  PVECTORS_85          
+0     0000871c  PVECTORS_86          
+0     0000871d  PVECTORS_87          
+0     0000871e  PVECTORS_88          
+0     0000871f  PVECTORS_89          
+0     00008720  PVECTORS_90          
+0     00008721  PVECTORS_91          
+0     00008722  PVECTORS_92          
+0     00008723  PVECTORS_93          
+0     00008724  PVECTORS_94          
+0     00008725  PVECTORS_95          
+0     00008726  PVECTORS_96          
+0     00008727  PVECTORS_97          
+0     00008728  PVECTORS_98          
+0     00008729  PVECTORS_99          
+0     0000872a  PVECTORS_100         
+0     0000872b  PVECTORS_101         
+0     0000872c  PVECTORS_102         
+0     0000872d  PVECTORS_103         
+0     0000872e  PVECTORS_104         
+0     0000872f  PVECTORS_105         
+0     00008730  PVECTORS_106         
+0     00008731  PVECTORS_107         
+0     00008732  PVECTORS_108         
+0     00008733  PVECTORS_109         
+0     00008734  PVECTORS_110         
+0     00008735  PVECTORS_111         
+0     00008736  PVECTORS_112         
+0     00008737  PVECTORS_113         
+0     00008738  PVECTORS_114         
+0     00008739  PVECTORS_115         
+0     0000873a  PVECTORS_116         
+0     0000873b  PVECTORS_117         
+0     0000873c  PVECTORS_118         
+0     0000873d  PVECTORS_119         
+0     0000873e  PVECTORS_120         
+0     0000873f  PVECTORS_121         
+0     00008740  PVECTORS_122         
+0     00008741  PVECTORS_123         
+0     00008742  PVECTORS_124         
+0     00008743  PVECTORS_125         
+0     00008744  PVECTORS_126         
+0     00008745  PVECTORS_127         
+0     00008746  PVECTORS_53          
+0     000087ea  ___etext__           
+0     000087ea  etext                
+0     003f6000  _text_loadstart      
+0     003f67ea  copy_sections        
+0     003f7ff6  code_start           
+abs   000007ea  _text_size           
+abs   ffffffff  ___TI_pprof_out_hndl 
+abs   ffffffff  ___TI_prof_data_size 
+abs   ffffffff  ___TI_prof_data_start
+abs   ffffffff  ___binit__           
+abs   ffffffff  ___c_args__          
+abs   ffffffff  ___cinit__           
+abs   ffffffff  ___pinit__           
+abs   ffffffff  binit                
+abs   ffffffff  cinit                
+abs   ffffffff  pinit                
+
+[149 symbols]

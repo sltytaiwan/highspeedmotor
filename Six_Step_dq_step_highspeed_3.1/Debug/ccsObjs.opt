@@ -1,0 +1,9 @@
+"./CodeStartBranch.obj"
+"./SectionCopy_nonBIOS.obj"
+"./isr_current.obj"
+"./isr_speed.obj"
+"./source_initial.obj"
+"./source_main.obj"
+"./source_vectors.obj"
+"../F28035.cmd"
+-llibc.a
